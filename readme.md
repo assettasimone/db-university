@@ -44,6 +44,15 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 - department_id (FK)
 
 
+### Table: courses
+
+- id
+- name
+- cfu
+- description
+- degree_course_id
+
+
 ### Table: students
 
 - id
@@ -61,25 +70,18 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 - name
 - room
 - date
-- course_id
-- teacher_id
-- student_id
+- course_id (FK)
+- teacher_id (FK)
+- student_id (FK)
 - vote
 - attempt_number
 - passed
 
 
-### Table Courses
-
-- id
-- name
-- CFU
-- description
-- degree_course_id
-- department_id
 
 
-### Table Pivot: Courses_teachers
+
+### Table Pivot: courses_teachers
 
 - id
 - teacher_id
