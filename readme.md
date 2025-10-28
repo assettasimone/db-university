@@ -70,16 +70,17 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 - name
 - room
 - date
+
+
+### Table pivot: exams_students_teachers
+
+- id
 - course_id (FK)
 - teacher_id (FK)
 - student_id (FK)
 - vote
 - attempt_number
 - passed
-
-
-
-
 
 ### Table Pivot: courses_teachers
 
