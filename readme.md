@@ -32,7 +32,7 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 - tax_id_code
 - role
 - office
-- department_id
+- department_id (FK)
 
 
 ### Table: degree_courses
@@ -41,6 +41,46 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 - name
 - type
 - duration
+- department_id (FK)
+
+
+### Table: students
+
+- id
+- first_name
+- last_name
+- freshman
+- enrollment_year
+- mail
+- birth_date
+- degree_course_id (FK)
+
+### Table: exams
+
+- id
+- name
+- room
+- date
+- course_id
+- teacher_id
+- student_id
+- vote
+- attempt_number
+- passed
+
+
+### Table Courses
+
+- id
+- name
+- CFU
+- description
+- degree_course_id
 - department_id
 
 
+### Table Pivot: Courses_teachers
+
+- id
+- teacher_id
+- course_id
