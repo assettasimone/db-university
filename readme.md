@@ -13,77 +13,77 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 
 ### Table: departments 
 
-- id
-- name
-- address
-- telephone
-- mail
-- website
-- director
+- id INT 
+- name VARCHAR(30)
+- address VARCHAR(60)
+- telephone VARCHAR(11)
+- mail VARCHAR(60)
+- website VARCHAR(60)
+- director VARCHAR(60)
 
 
 ### Table: teachers
 
-- id
-- first_name
-- last_name
-- telephone
-- mail
-- tax_id_code
-- role
-- office
-- department_id (FK)
+- id INT
+- first_name VARCHAR(60)
+- last_name VARCHAR(60)
+- telephone VARCHAR(11)
+- mail VARCHAR(60)
+- tax_id_code CHAR(16)
+- role VARCHAR(11)
+- office VARCHAR(5)
+- department_id (FK) INT
 
 
 ### Table: degree_courses
 
-- id
-- name
-- type
-- duration
-- department_id (FK)
+- id  INT
+- name VARCHAR(60)
+- type VARCHAR(20)
+- duration TINYINT
+- department_id (FK) INT
 
 
 ### Table: courses
 
-- id
-- name
-- cfu
-- description
-- degree_course_id
+- id  INT
+- name VARCHAR(60)
+- cfu TINYINT
+- description TEXT
+- degree_course_id INT
 
 
 ### Table: students
 
-- id
-- first_name
-- last_name
-- freshman
-- enrollment_year
-- mail
-- birth_date
-- degree_course_id (FK)
+- id  INT
+- first_name VARCHAR(60)
+- last_name VARCHAR(60)
+- freshman CHAR(6)
+- enrollment_year YEAR
+- mail VARCHAR(60)
+- birth_date DATE
+- degree_course_id (FK) INT
 
 ### Table: exams
 
-- id
-- name
-- room
-- date
+- id  INT
+- name VARCHAR(60)
+- room VARCHAR(5)
+- date DATE
 
 
 ### Table pivot: exams_students_teachers
 
-- id
-- course_id (FK)
-- teacher_id (FK)
-- student_id (FK)
-- vote
-- attempt_number
-- passed
+- id  INT
+- course_id (FK)  INT
+- teacher_id (FK)  INT
+- student_id (FK)  INT
+- vote TINYINT
+- attempt_number TINYINT
+- passed TINYINT
 
 ### Table Pivot: courses_teachers
 
-- id
-- teacher_id
-- course_id
+- id  INT
+- teacher_id INT
+- course_id INT
